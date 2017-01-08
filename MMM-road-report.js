@@ -19,7 +19,9 @@ Module.register("MMM-road-report", {
 		self = this;
 		this.url = '';
 		this.urls = {
-			'ND': 'http://www.dot.nd.gov/travel-info-v2/downloads/roads-printable.gif'
+			'MT': 'http://www.safetravelusa.com/mt/data/statewide.png',
+			'ND': 'http://www.dot.nd.gov/travel-info-v2/downloads/roads-printable.gif',
+			'WY': 'http://map.wyoroad.info/arcgis/rest/services/WTI2_PROD/WTI2_BASE/MapServer/export?bbox={xmin:-12372628,ymin:5002040,xmax:-11573147,ymax:5631652}&bboxSR=&layers=0,1,2,3,4,5,6,7,8,9,10&layerDefs=&size=650,510&imageSR=&format=gif&transparent=true&dpi=&f=image'
 		}
 		this.url = this.urls[this.config.location];
 
