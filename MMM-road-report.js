@@ -10,9 +10,10 @@
 Module.register("MMM-road-report", {
 	defaults: {
 		location: "ND",
-		maxImageHeight: '200px',
-		maxImageWidth: '200px',
-		updateInterval: 10 * 60 * 1000 // 10 minutes
+		maxImageHeight: '300px',
+		maxImageWidth: '300px',
+		updateInterval: 10 * 60 * 1000, // 10 minutes
+		fadeSpeed: 1000
 	},
 
 	start: function () {
@@ -26,7 +27,7 @@ Module.register("MMM-road-report", {
 		this.url = this.urls[this.config.location];
 
 		setInterval(function () {
-			self.updateDom(1000);
+			self.updateDom(self.config.fadeSpeed);
 		}, this.config.updateInterval);
 	},
 
