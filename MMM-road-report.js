@@ -38,12 +38,8 @@ Module.register("MMM-road-report", {
 	getDom: function () {
 		var wrapper = document.createElement("div");
 		var image = document.createElement("img");
-		if (this.config.ownImagePath != '') {
-			image.src = this.url;
-		} else {
-			image.src = this.url + '?' + new Date().getTime();
-		}
 
+		image.src = this.url;
 		image.className = 'MMM-road-report-image';
 		image.style.maxHeight = this.config.maxImageHeight.toString();
 		image.style.maxWidth = this.config.maxImageWidth.toString();
